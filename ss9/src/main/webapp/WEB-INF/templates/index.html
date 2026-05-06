@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        .dark { background-color: #333; color: white; }
+        .light { background-color: white; color: black; }
+    </style>
+</head>
+<body th:class="${currentTheme}">
+<h1>Cấu hình giao diện</h1>
+<p>Chế độ hiện tại: <span th:text="${currentTheme}"></span></p>
+<form th:action="@{/change-theme}" method="post">
+    <select name="theme">
+        <option value="light">Sáng</option>
+        <option value="dark">Tối</option>
+    </select>
+    <button type="submit">Lưu cấu hình (30 ngày)</button>
+</form>
+</body>
+</html>

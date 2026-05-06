@@ -1,0 +1,4 @@
+<form th:action="@{/shop/step1}" th:object="${shopData}" method="post">
+    <input type="text" th:field="*{contactName}" placeholder="Tên người liên hệ" />
+    <button type="submit">Tiếp tục</button>
+</form>

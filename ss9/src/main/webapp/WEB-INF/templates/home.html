@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style th:inline="css">
+        body.dark { background: #333; color: #fff; }
+        body.light { background: #fff; color: #000; }
+    </style>
+</head>
+<body th:class="${theme}">
+<h1 th:text="${msg}"></h1>
+<form th:action="@{/change-theme}" method="post">
+    <select name="theme">
+        <option value="light">Sáng</option>
+        <option value="dark">Tối</option>
+    </select>
+    <button type="submit">Đổi giao diện</button>
+</form>
+<hr/>
+<a href="/shop/step1">Đăng ký gian hàng (3 bước)</a>
+</body>
+</html>
